@@ -3,7 +3,7 @@ import { Slice, Fragment, Node } from '@tiptap/pm/model';
 
 const transformPasted = (slice: Slice, view: EditorView): Slice => {
   const flattenNestedOrderedLists = (node: Node): Node => {
-    if (node.type.name === 'ordered_list') {
+    if (node.type.name === 'orderedList') {
       const newContent: Node[] = [];
       node.content.forEach(child => {
         if (child.type.name !== 'orderedList') {
