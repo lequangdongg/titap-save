@@ -27,7 +27,7 @@ const transformPasted = (slice: Slice, view: EditorView): Slice => {
 };
 
 const editorProps = {
-  transformPasted: (slice: Slice, view: EditorView): Slice => transformPasted(slice, view)
+  transformPasted
 };
 
 ```
