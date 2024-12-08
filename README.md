@@ -1,6 +1,5 @@
 ```
-import { Slice, Fragment, Node } from 'prosemirror-model';
-import { EditorView } from 'prosemirror-view';
+import { Slice, Fragment, Node } from '@tiptap/pm/model';
 
 const transformPasted = (slice: Slice, view: EditorView): Slice => {
   const flattenNestedOrderedLists = (node: Node): Node => {
@@ -31,10 +30,5 @@ const transformPasted = (slice: Slice, view: EditorView): Slice => {
 const editorProps = {
   transformPasted: (slice: Slice, view: EditorView): Slice => transformPasted(slice, view)
 };
-
-// Example EditorView usage
-const editorView = new EditorView({
-  props: editorProps
-});
 
 ```
