@@ -18,7 +18,6 @@ const transformPasted = (slice: Slice, view: EditorView): Slice => {
       });
       return node.copy(Fragment.from(newContent));
     } else if (node.isBlock) {
-      // Apply the transformation recursively for all child nodes
       return node.copy(node.content.map(flattenNestedOrderedLists));
     }
     return node;
